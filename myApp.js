@@ -22,11 +22,8 @@ const createAndSavePerson = (done) => {
     favoriteFoods: ["spaghetti", "pizza"],
   });
   david.save(function (err, data) {
-    if (err) {
-      return done(err);
-    } else {
-      done(null, data);
-    }
+    if (err) return console.error(err);
+    done(null, data);
   });
 };
 
