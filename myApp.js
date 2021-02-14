@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 let personSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  name: String,
   age: Number,
   favoriteFoods: [String],
 });
