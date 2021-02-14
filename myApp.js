@@ -1,5 +1,21 @@
-require('dotenv').config();
+require("dotenv").config();
 
+const mongoose = require("mongoose");
+
+// const MongoClient = require("mongodb").MongoClient;
+// const uri =
+//   "";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect((err) => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 let Person;
 
